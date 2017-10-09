@@ -104,3 +104,120 @@ Vefsíða
   </footer>
   </body>
 </html>
+
+# -------------------------------------------------------------
+# Um.scss
+
+// breytur fyrir mikið notaðar stærðir
+$max-width: 1200px;
+$gutter: 20px;
+
+/* setjum box-sizing: border-box; á allt */
+html { /* stylelint-disable-line */
+  box-sizing: border-box;
+}
+
+*, *:before, *:after { /* stylelint-disable-line */
+  box-sizing: inherit;
+
+  /* fjarlægjum margin og padding */
+  padding: 0;
+  margin: 0;
+}
+
+html { /* stylelint-disable-line */
+  // til þess að texti liggi ekki upp við brún á viewport þegar
+  // við erum < 1200px breiðum skjá, setjum margin á báða kanta html
+  // ruglar líka ekki í grid overlay
+  margin-right: $gutter;
+  margin-left: $gutter;
+
+  font-family: Lato, helvetica, arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+
+  @media (min-width: $max-width) {
+    margin: 0;
+  }
+}
+
+body, main { /* stylelint-disable-line */
+  max-width: $max-width;
+  margin: 0 auto;
+
+  // þar sem við erum að eiga við neikvæð margin á grid, setjum overflow-x
+  // hér sem hidden, þá fáum við ekki lárétta skrunstiku
+  overflow-x: hidden;
+}
+
+.main_content {
+  margin-top: $gutter * 4;
+  margin-bottom: $gutter * 4;
+}
+
+.aside{
+  display: flex;
+  margin-left: $gutter * 2;
+  padding: ($gutter * 4) 0;
+  float: right;
+  height: 100%;
+  justify-content: center;
+}
+
+.blockquote{
+  padding-left: 11rem;
+  padding-right: 1rem;
+}
+
+.blockquote p{
+  padding-bottom: 1rem;
+}
+
+.footer{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: $gutter * 10;
+  background-color: #000;
+  color: #eee;
+  align-items: center;
+  justify-content: space-around;
+
+  &__higher_text_parent{
+   display: flex;
+   height: 50%;
+   justify-content: center;
+  }
+
+  &__higher_text--one{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: $gutter * 5;
+  }
+
+  &__higher_text--two{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: $gutter * 4;
+    margin-right: -($gutter / 2);
+  }
+
+  &__lower_text{
+   color: #666;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   border-top: 2px solid #666;
+  }
+}
+
+@import "scss/grid";
+@import "scss/header";
+@import "scss/heading";
+@import "scss/text";
+@import "scss/button";
+@import "scss/card";
+@import "scss/cardlist";
+
