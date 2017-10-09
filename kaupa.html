@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="kaupa.css">
+  <head>
+      <title>Kaupa</title>
+  </head>
+  <body>
+    <header>
+      <h1>Kaupa</h1>
+    </header>
+            <div class="container">
+      <div class="item">
+      <h2>Persónuupplýsingar</h2>
+        <p>Nafn:</p>
+          <input type="text">
+        <p>Kennitala:</p>
+          <input type="text" value="123456-7890">
+        <p>Kyn:</p>
+<input type="radio" name="kyn" value="Kona"> Kona <br>
+<input type="radio" name="kyn" value="Karl"> Karl <br>
+<input type="radio" name="kyn" value="annað?"> Annað?
+  <p>Sími:</p>
+    <input type="text">
+  <p>Heimilisfang:</p>
+    <input type="text">
+      <form action="/action_page.php" method="get">
+          <input type="checkbox" name="vehicle" value="Car" checked=""> Skrá mig á póstlista
+      </form>
+    </div>
+      <div class="item">
+      <h2>Greiðsluupplýsingar</h2>
+      <form action="/action_page.php">
+      Greiðsla með: <select name="Greiðslumáti">
+                      <option value="">Kreditkorti</option>
+                      <option value="">Debitkorti</option>
+                      <option value="">Reiðufé</option>
+                    </select>
+      </form>
+    <p>Nafn á korti:</p>
+      <input type="text">
+    <p>Kortanúmer:</p>
+      <input type="text" value="1337-1337-1337-1337">
+    <p>Gildistími:</p>
+    <form action="/action_page.php">
+    Mán <select name="Gildistími">
+                    <option value="">01</option>
+                    <option value="">02</option>
+                    <option value="">03</option>
+                    <option value="">04</option>
+                    <option value="">05</option>
+                    <option value="">06</option>
+                    <option value="">07</option>
+                    <option value="">08</option>
+                    <option value="">09</option>
+                    <option value="">10</option>
+                    <option value="">11</option>
+                    <option value="">12</option>
+        </select>
+    </form>
+        <form action="/action_page.php">
+    Ár <select name="Gildistími">
+                    <option value="">2017</option>
+                    <option value="">2018</option>
+                    <option value="">2019</option>
+                    <option value="">2020</option>
+        </select>
+    </form>
+  </div>
+</div>
+  <div class="button_container">
+    <div class="button">
+      <button class="button">Panta</button>
+    </div>
+  </div>
+    <footer>
+    <p>Foo þjónustan <br> 123-4567</p>
+    <p>Opip 12-13 alla daga <br> Bargata 1 <br> 900Foo</p>
+  </footer>
+  <footer class="lower">
+    <p>© Fooþjónustan 2017</p>
+  </footer>
+  </body>
+</html>
