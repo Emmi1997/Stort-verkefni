@@ -1,9 +1,20 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
 header{
   height: 500px;
-  background-image: url("bg.jpg");
-  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 2em;
+  padding: 2em;
+
+  width: 100%;
+  min-height: 500px;
+
+  background: transparent url("bg.jpg") no-repeat fixed 50% 50%;
   background-size: cover;
-  background-position: 50% 50%;
 }
 h1{
   display: flex;
@@ -12,11 +23,29 @@ h1{
 h2{
   display: flex;
   justify-content: center;
+  margin-top: 200px;
 }
 .fleximage{
   border-radius: 0px;
-  max-width: 50%;
-  max-height: 50%;
+  width: 60%;
+}
+.check{
+  width: 5%;
+  height: 5%;
+}
+.textandtools{
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid green;
+}
+.checkmark{
+display: block;
+border: 1px solid red;
+}
+.tools{
+  display: block;
+  width: 50%;
+  border: 1px solid blue;
 }
 img{
   border-radius: 50%;
@@ -63,6 +92,12 @@ padding: 20px;
 background-color: #484848;
 color: white;
 }
-.check_image{
-  border: 1px solid black;
+.people{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.people > div{
+  display: inline-block;
 }
