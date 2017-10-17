@@ -1,9 +1,44 @@
 html {
-  box-sizing: border-box;
+  /* stylelint-disable-line */
+  margin-right: 20px;
+  margin-left: 20px;
   font-size: 16px;
-}
+  line-height: 1.5; }
+  @media (min-width: 400px) {
+    html {
+      margin: 0; } }
+      main {
+        /* stylelint-disable-line */
+        max-width: 1200px;
+        margin: 0 auto;
+        overflow-x: hidden; }
+        .animation1{
+          animation: fadeAndScale1 2s ease-in forwards;
+          opacity: 0;
+        }
+        @keyframes fadeAndScale1 {
+          from{
+            opacity: 0;
+          }
+          to{
+            opacity: 1;
+          }
+        }
+    .animation2{
+      animation: fadeAndScale2 2s ease-in forwards;
+      animation-delay: 1s;
+      opacity: 0;
+    }
+    @keyframes fadeAndScale2{
+      from{
+        opacity: 0;
+      }
+      to{
+        opacity: 1;
+      }
+    }
 header{
-  height: 500px;
+  height: 31.25em;
   display: flex;
   flex-direction: column;
 
@@ -11,54 +46,79 @@ header{
   padding: 2em;
 
   width: 100%;
-  min-height: 500px;
-
+  min-height: 31.25em;
+color: black;
   background: transparent url("bg.jpg") no-repeat fixed 50% 50%;
   background-size: cover;
+  margin-bottom: 13.125em;
+}
+
+}
+body{
+  margin: auto;
+  min-width: 400px;
 }
 h1{
+  font-size: 72px;
+  font-weight: bold;
   display: flex;
   justify-content: center;
+  font-family: 'Roboto Slab', serif;
 }
 h2{
+  font-size: 60px;
+  font-weight: bold;
   display: flex;
   justify-content: center;
-  margin-top: 200px;
+  margin-top: 1em;
+  font-family: 'Roboto Slab', serif;
 }
 .fleximage{
   border-radius: 0px;
-  width: 60%;
+  width: 100%;
+}
+.checktext{
+  display: inline-flex;
 }
 .check{
   width: 5%;
   height: 5%;
+  margin-top: 1.25em;
 }
 .textandtools{
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid green;
+  justify-content: center;
+  width: 100%;
+  height: 400px;
+  margin-bottom: 50px;
+}
+.text{
+  margin-left: 5em;
 }
 .checkmark{
 display: block;
-border: 1px solid red;
+margin-bottom: 1.875em;
 }
 .tools{
-  display: block;
-  width: 50%;
-  border: 1px solid blue;
+display: block;
+width: 40%;
+background-size: cover;
+margin-right: 5em;
 }
 img{
   border-radius: 50%;
+  width: 70%;
 }
 .button {
   display: inline-block;
 
   margin: 0;
-  padding: 10px 5px;
+  padding: 0.625em 5px;
   border: 1px solid #666;
   border-radius: 4px;
   width: 100%;
-  max-width: 256px;
+  max-width: 16em;
 
   overflow: hidden;
   text-overflow: ellipsis;
@@ -74,6 +134,24 @@ img{
   text-align: center;
 
   cursor: pointer;
+  transition: background-color 500ms ease, color 500ms ease;
+
+  animation: fadeAndScale3 2s ease-in forwards;
+  animation-delay: 2s;
+  opacity: 0;
+}
+@keyframes fadeAndScale3{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+.button:hover {
+  color: #eee;
+  background-color: #333;
+border: 1px solid #333;
 }
 .last{
   display: flex;
@@ -82,7 +160,7 @@ img{
 .button_container{
   display: flex;
   justify-content: center;
-  padding-bottom: 50px;
+  padding-bottom: 3.125em;
 }
 footer{
 border-bottom: 2px solid #999;
@@ -94,10 +172,59 @@ color: white;
 }
 .people{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 20px;
-  margin-bottom: 50px;
+  margin-top: 25.125em;
+  margin-bottom: 3.125em;
+  margin-left: 6.25em;
 }
 .people > div{
   display: inline-block;
+}
+.bold{
+  font-size: 18px;
+  font-weight: bold;
+}
+.shrink{
+  font-size: 12px;
+  font-weight: bold;
+  color: grey;
+}
+.heading{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  color: #fff;
+  width: 100%;
+  opacity: 0.9;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+}
+.umkaupa{
+  display: inline-flex;
+  vertical-align: text-bottom;
+}
+a{
+  text-decoration: none;
+  color: white;
+  padding-right: 10px;
+  font-family: 'Roboto Slab', serif;
+}
+.people > div > p{
+width: 260px;
+text-align: center;
+}
+ p{
+  width: 500px;
+  font-family: 'Open Sans', sans-serif;
+}
+.heading > h2{
+  font-size: 24px;
+  padding-left: 10px;
+}
+.umkaupa > a{
+  font-size: 2em;
 }
