@@ -1,36 +1,33 @@
-# Stort-verkefni
-Vefsíða
-
-# Um.html
-
 <!doctype html>
 <html class="grid" lang="is">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stort Verkefni 6 - Um</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato|Merriweather" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="grid.css">
   </head>
 </head>
 <body>
   <header class="header col-12">
     <section class="header__top_bar col-12">
-      <p>Fooþjónusta</p>
+      <heading class="heading">
+        <h3 class="heading--three heading__top">Fooþjónustan</h3>
+      </heading>
       <nav class="header__nav">
-        <a href="">Um</a>
-        <button class="button">Kaupa</button>
+        <a class="header__nav_a" href="">Um</a>
+        <button class="button button__kaupa_button">Kaupa</button>
       </nav>
     </section>
-    <section class="header__image col-12 row col offset_wider">
-    <heading class="heading col-6">
-      <h1 class="heading--two">Um Fooþjónustuna</h1>
-    </heading>
-  </section>
+    <section class="header__image col-12">
+      <h2 class="heading heading--two col-sm-9">Um Fooþjónustuna</h2>
+    </section>
   </header>
-  <main>
-    <section class="main_content">
-      <h2 class="heading heading--three">Hvað er Fooþjónusta ?</h2>
+  <main class="main_content">
+      <h3 class="heading heading--three">
+        Hvað er Fooþjónustan ?
+      </h3>
       <p class="text text__p">
         Í hinum ódauðlegu orðum stofnanda okkar:
       </p>
@@ -51,11 +48,11 @@ Vefsíða
         Proin mattis lacus id aliquam maximus. Lorem ipsum dolor sit amet,
         consectetur adipiscing elit. Vestibulum vel metus risus.
       </p>
-      <aside class="aside col-7">
-        <blockquote class="blockquote">
+      <aside class="aside col-7 col-sm-12">
+        <blockquote class="aside__blockquote">
           <p>„Aenean in purus vel leo pellentesque lacinia non ut magna.
           Sed eleifend tristique mollis.“</p>
-          <p class="text text_p">— Foobarius Baz</p>
+          <p class="aside__quote_author">— Foobarius Baz</p>
         </blockquote>
       </aside>
       <p class="text text__p">
@@ -82,10 +79,9 @@ Vefsíða
         Suspendisse vel erat sagittis, lobortis tortor vitae, pellentesque diam.
         Aenean fringilla elit id mi tincidunt tempus.
       </p>
-    </section>
   </main>
-  <footer class="footer row offset_wider">
-    <div class="footer__higher_text_parent col-12">
+  <footer class="footer row offset_wider col-sm-12">
+    <div class="footer__higher_text_parent col-12 col-sm-12">
       <div class="footer__higher_text--one">
         <p>Fooþjónustan</p>
         <p>123-4567</p>
@@ -96,7 +92,7 @@ Vefsíða
         <p>900 Foobar</p>
       </div>
     </div>
-    <div class="footer__lower_text offset_thinner">
+    <div class="footer__lower_text offset_thinner col-sm-12">
       <p class="text__p">
         © Fooþjónustan 2017
       </p>
@@ -104,120 +100,3 @@ Vefsíða
   </footer>
   </body>
 </html>
-
-# -------------------------------------------------------------
-# Um.scss
-
-// breytur fyrir mikið notaðar stærðir
-$max-width: 1200px;
-$gutter: 20px;
-
-/* setjum box-sizing: border-box; á allt */
-html { /* stylelint-disable-line */
-  box-sizing: border-box;
-}
-
-*, *:before, *:after { /* stylelint-disable-line */
-  box-sizing: inherit;
-
-  /* fjarlægjum margin og padding */
-  padding: 0;
-  margin: 0;
-}
-
-html { /* stylelint-disable-line */
-  // til þess að texti liggi ekki upp við brún á viewport þegar
-  // við erum < 1200px breiðum skjá, setjum margin á báða kanta html
-  // ruglar líka ekki í grid overlay
-  margin-right: $gutter;
-  margin-left: $gutter;
-
-  font-family: Lato, helvetica, arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-
-  @media (min-width: $max-width) {
-    margin: 0;
-  }
-}
-
-body, main { /* stylelint-disable-line */
-  max-width: $max-width;
-  margin: 0 auto;
-
-  // þar sem við erum að eiga við neikvæð margin á grid, setjum overflow-x
-  // hér sem hidden, þá fáum við ekki lárétta skrunstiku
-  overflow-x: hidden;
-}
-
-.main_content {
-  margin-top: $gutter * 4;
-  margin-bottom: $gutter * 4;
-}
-
-.aside{
-  display: flex;
-  margin-left: $gutter * 2;
-  padding: ($gutter * 4) 0;
-  float: right;
-  height: 100%;
-  justify-content: center;
-}
-
-.blockquote{
-  padding-left: 11rem;
-  padding-right: 1rem;
-}
-
-.blockquote p{
-  padding-bottom: 1rem;
-}
-
-.footer{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  height: $gutter * 10;
-  background-color: #000;
-  color: #eee;
-  align-items: center;
-  justify-content: space-around;
-
-  &__higher_text_parent{
-   display: flex;
-   height: 50%;
-   justify-content: center;
-  }
-
-  &__higher_text--one{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: $gutter * 5;
-  }
-
-  &__higher_text--two{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: $gutter * 4;
-    margin-right: -($gutter / 2);
-  }
-
-  &__lower_text{
-   color: #666;
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   border-top: 2px solid #666;
-  }
-}
-
-@import "scss/grid";
-@import "scss/header";
-@import "scss/heading";
-@import "scss/text";
-@import "scss/button";
-@import "scss/card";
-@import "scss/cardlist";
-
