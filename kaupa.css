@@ -1,3 +1,17 @@
+html {
+  /* stylelint-disable-line */
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 16px;
+  line-height: 1.5; }
+  @media (min-width: 1200px) {
+    html {
+      margin: 0 1em 0 1em;; } }
+      main {
+        /* stylelint-disable-line */
+        max-width: 1200px;
+        margin: 0 auto;
+        overflow-x: hidden; }
 .container{
   display: flex;
   flex-wrap: wrap;
@@ -7,7 +21,6 @@
   display: block;
   width:auto;
 }
-
 .button {
   display: inline-block;
 
@@ -32,17 +45,22 @@
   text-align: center;
 
   cursor: pointer;
+  transition: background-color 500ms ease, color 500ms ease;
 }
+.button:hover {
+  color: #eee;
+  background-color: #333;
+border: 1px solid #333;}
 .button_container{
   display: flex;
   justify-content: center;
   padding-bottom: 50px;
 }
 header{
-height: 600px;
+  display: flex;
+height: 30em;
 background-image: url("bg-subpage.jpg");
 background-size: cover;
-background-position: 50% 50%;
 background-repeat: no-repeat;
 }
 footer{
@@ -53,12 +71,62 @@ padding: 20px;
 background-color: #484848;
 color: white;
 }
-.lower{
-
+footer>p{
+  padding-left: 1em;
+  padding-right: 1em;
 }
 h1{
+  font-size: 4.5em;
   color: white;
+padding-top: 150px;
+padding-left: 20px;
+font-family: 'Roboto Slab', serif;
+}
+h2{
+  font-family: 'Roboto Slab', serif;
+font-size: 24px;
+padding-left: 10px;
 }
 body{
   margin: auto;
+}
+.box{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  color: #fff;
+  width: 100%;
+  opacity: 0.9;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a{
+  text-decoration: none;
+  color: white;
+  padding-right: 10px;
+  font-family: 'Roboto Slab', serif;
+}
+.umkaupa{
+  display: inline-flex;
+  vertical-align: text-bottom;
+}
+input > .text{
+  color: grey;
+}
+p{
+  font-family: 'Open Sans', sans-serif;
+}
+.umkaupa > a{
+  font-weight: bold;
+  font-size: 2em;
+}
+.box > p{
+  font-weight: bold;
+  font-size: 1em;
+  padding-left: 1em;
+}
+.umkaupa > .button{
+margin-right: 1em;
 }

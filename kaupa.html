@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
-<meta charset="utf-8">
-<link rel="stylesheet" href="kaupa.css">
   <head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="kaupa.css">
       <title>Kaupa</title>
   </head>
   <body>
     <header>
+      <div class="box">
+        <h2>Fooþjónustan</h2>
+        <div class="umkaupa">
+        <a href="um.html">Um</a>
+        <div class="button">
+          <a href="kaupa.html" class="button__anchor">Kaupa</a>
+        </div>
+        </div>
+      </div>
       <h1>Kaupa</h1>
     </header>
             <div class="container">
@@ -32,8 +44,8 @@
       <h2>Greiðsluupplýsingar</h2>
       <form action="/action_page.php">
       Greiðsla með: <select name="Greiðslumáti">
-                      <option value="">Kreditkorti</option>
-                      <option value="">Debitkorti</option>
+                      <option value="">Kreditkort</option>
+                      <option value="">Millifærsla</option>
                       <option value="">Reiðufé</option>
                     </select>
       </form>
@@ -68,6 +80,7 @@
     </form>
   </div>
 </div>
+<br>
   <div class="button_container">
     <div class="button">
       <button class="button">Panta</button>
